@@ -1,0 +1,274 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  background-color: #fef6d4;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.logo img {
+  height: 8vh;
+  width: 6vw; 
+  margin: 0%;
+  padding: 10px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.search-bar button {
+  padding: 8px 15px;
+  font-size: 16px;
+  background-color: #d858ad;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-links a {
+  color: #d858ad;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.novo_post {
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color:  #d858ad;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.novo_post:hover {
+  background-color: rgb(216, 216, 98);
+}
+
+.novo_post:active {
+  background-color: rgb(216, 216, 98); 
+}
+
+
+.header-links a:hover {
+  color: rgb(216, 216, 98); 
+}
+
+.titulo_blog {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #d858ad;
+  margin-top: 40px;
+
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.texto_titulo {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  color: #000000;
+}
+
+.section5 article {
+    width: 1100px;
+    height: 180px;
+    display: flex;
+    max-width: 80vw;
+    color: #000000;
+
+}
+
+
+
+.container-1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.container-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 20px;
+}
+
+.container-3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.coluna {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    height: 150px;
+}
+
+.nome-comentario {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    transition: 0.4s;
+}
+
+.avaliar-comentario {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 3px;
+    height: 30px;
+
+    transition: 0.4s;
+}
+
+.avaliar-comentario img {
+    width: 125px;
+}
+
+.data {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #caa609;
+}
+
+.avaliar-comentario h2 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 10px;
+    opacity: 0.7;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.texto-comentario {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    width: auto;
+    height: 80px;
+
+    transition: 0.4s;
+}
+
+
+footer {
+  background-color:  #fef6d4;
+  width: 100vw;
+  height: 70px;
+  bottom: 0;
+}
+
+#blog-add{
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  background-color: #fdcee1;
+  display: none;
+  border-radius: 10px;
+}
+
+.form-blog{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.campo-blog{
+  width: 70%;
+  border-radius: 4px;
+  border: 0 solid transparent;
+  border-bottom: 2px solid  #d858ad;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+#campo-title{
+  height: 40px;
+}
+
+.title {
+   font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.enviar {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.title-comentario {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* #messages {
+  color: #000000;
+  width: 100%;
+  background-color: green;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-top: 5vh;
+  display: block;
+  height: 40;
+} */

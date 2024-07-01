@@ -1,0 +1,28 @@
+CREATE DATABASE calmkidz;
+
+USE calmkidz;
+
+CREATE TABLE usuario (
+  id int auto_increment NOT NULL PRIMARY KEY,
+  nome varchar(255) NOT NULL,
+  email varchar(255) NOT NULL UNIQUE,
+  idade int NOT NULL,
+  senha varchar(255) NOT NULL,
+  data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE postagens (
+  id int auto_increment NOT NULL PRIMARY KEY,
+  titulo varchar(255) not null,
+  conteudo longtext NOT NULL,
+  data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+select * from postagens;
+
+delete from postagens
+	WHERE id > 0;
+
+
+
+

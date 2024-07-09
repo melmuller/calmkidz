@@ -10,10 +10,16 @@ app.use(express.json());
 // Middleware para permitir CORS
 app.use(cors());
 
+const usersRouter = require('./routes/usersRouter');
+const loginRouter = require('./routes/loginRouter');
+
 // Prefixo para as rotas da API
 app.use("/api", router);
 
 // Configuração da porta
 app.set('port', process.env.PORT || 3008);
+
+app.use('/api', usersRouter);
+app.use('/api', loginRouter);
 
 module.exports = app;

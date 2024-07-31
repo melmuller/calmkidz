@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+#logo {
+    height: 8vh;
+    width: 6vw; 
+    margin: 0%;
+    padding: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.account {
+    background-color:  #eda3fc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.search input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.account {
+    background-color:  #eda3fc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav .cta {
+    background-color: #EFC9C9;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.intro h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #666;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    padding: 20px;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.section img {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+#what-is {
+    background-color: #f5c2ff;
+}
+
+#symptoms {
+    background-color: #f6f9d1;
+}
+
+#what-to-do {
+    background-color: #eda3fc;
+}

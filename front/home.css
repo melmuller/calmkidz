@@ -58,11 +58,6 @@ main {
     width: 550px;
 }
 
-.estudante {
-    position: fixed;
-    width: 100px;
-    height: 150px;
-}
 
 .symptoms-section {
     display: flex;

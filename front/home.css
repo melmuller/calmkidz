@@ -120,4 +120,18 @@ main {
 
 .tip p {
     color: #333;
+    text-decoration: none;
+}
+
+.tip {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    text-decoration: none;
 }

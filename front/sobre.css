@@ -8,6 +8,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Fonte semelhante ao Buffer */
+    background-color:  #fbfdd8; /* Cor de fundo semelhante ao Buffer */
 }
 
 header {
@@ -21,13 +23,12 @@ header {
 
 #logo {
     height: 8vh;
-    width: 6vw; 
-    margin: 0%;
+    width: auto; /* Ajustado para manter a proporção da imagem */
     padding: 10px;
 }
 
 .account {
-    background-color:  #eda3fc;
+    background-color: #eda3fc;
     padding: 10px 20px;
     border-radius: 5px;
     color: #fff;
@@ -39,34 +40,26 @@ nav a {
     color: #333;
 }
 
-nav .cta {
-    background-color: #EFC9C9;
-    padding: 5px 10px;
-    border-radius: 4px;
-}
-
-input[type="text"] {
-    padding: 8px;
-    margin-right: 20px;
-    width: 300px;
-}
-
 .about-us {
     display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
     align-items: center;
-    padding: 20px;
-    background-color: white;
+    padding: 50px 20px; /* Mais espaçamento */
+    background-color: #fff;
+    margin-top: 20px; /* Adiciona espaço entre o cabeçalho e o conteúdo */
 }
 
 .about-us img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 450px; /* Tamanho ajustado para o exemplo */
+    height: 400px; /* Tamanho ajustado para o exemplo */
+    border-radius: 50%; /* Circular como na imagem */
     margin-right: 20px;
+    padding: 70px;
 }
 
 .about-text {
     max-width: 600px;
+    text-align: left; /* Alinhamento do texto */
 }
 
 .about-text h1 {
@@ -77,4 +70,6 @@ input[type="text"] {
 .about-text p {
     line-height: 1.5;
     color: #666;
+    font-size: 1.1rem; /* Tamanho de fonte ajustado */
 }
+

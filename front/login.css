@@ -65,7 +65,7 @@ form {
   transition: .3s;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], input[type="email"] {
   font-family: "Quicksand", sans-serif;
   border: none;
   justify-content: center;

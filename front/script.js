@@ -1,10 +1,8 @@
-async function getUser () {
+async function getUser (data) {
 
-    const data = {email: 'email@email.com', password: '123'}
-
-    const response = await fetch('http://localhost:3005/api/login',{
+    const response = await fetch('http://localhost:3003/api/login',{
     method: "POST",
-    headers: {"Content-Type": "aplication/js"},
+    headers: { "Content-type": "application/json;charset=UTF-8" },
     body: JSON.stringify(data)
 
     });
@@ -14,12 +12,33 @@ async function getUser () {
     if(result.success) {
         console.log(result.data);
         alert(result.message);
+        window.location.href = "home.html"
     } else {
         alert(result.message);
     }
 }
 
-let call = getUser();
+
+
+let button = document.getElementById("handleSubmit");
+
+button.onclick = async function(event) {
+  event.preventDefault();
+
+
+  let email = document.querySelector("#email").value;
+  let senha = document.querySelector("#senha").value;
+
+
+  let data = {
+    email,
+    senha
+  };
+
+  getUser(data);
+
+}
+
 
  var formSignin = document.querySelector('#signin')
  var formSignup = document.querySelector('#signup')

@@ -10,6 +10,7 @@ async function storeTask(request, response) {
     const query = "INSERT INTO postagens(titulo, conteudo) VALUES(?,?)"
 
     connection.query(query, params, (err, results) => {
+        console.log("Entrou aqui")
         console.log(query, params, results)
         if (results) {
             response

@@ -2,11 +2,14 @@ const connection = require('../config/db');
 
 async function login(request, response) {
     const email = Array(request.body.email);
+    console.log(request.body.email)
 
-    const query = "SELECT name, email, password, id, created_at FROM users WHERE email = ?"
+    const query = "SELECT nome, email, senha FROM usuario WHERE email = ?;"
 
     connection.query(query, email, (err, results) => {
+
         if(results.length > 0) {
+            
             const password = request.body.password;
             const passwordQuery = results[0].password;
 

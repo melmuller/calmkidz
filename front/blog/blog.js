@@ -42,13 +42,14 @@ button.onclick = async function(event) {
   let title = document.querySelector("#title").value;
   let blog = document.querySelector("#campo-blog").value;
 
+
   let data = {
     title,
     blog
   };
   // Define valores pra botar no banco
   try {
-    const response = await fetch('http://localhost:3012/api/store/task', {
+    const response = await fetch('http://localhost:3003/api/store/task', {
       method: "POST",
       headers: { "Content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify(data)

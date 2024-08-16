@@ -18,7 +18,12 @@ CREATE TABLE postagens (
   data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-select * from postagens;
+select * from usuario;
+
+INSERT INTO usuario(nome, email, idade, senha) VALUES ("Gabriel","gabriel@gmail.com", 27, "122");
+
+SELECT nome, email, senha FROM usuario WHERE email = "gabriel@gmail.com";
+
 
 delete from postagens
 	WHERE id > 0;

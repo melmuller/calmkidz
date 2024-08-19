@@ -94,10 +94,15 @@ h2 {
     margin-top: 20px; /* Adiciona margem superior */
 }
 
-#video{
+#video {
+    /* Ajusta o tamanho da imagem de fundo para cobrir completamente o elemento */
     background-size: cover;
+    /* Evita que a imagem de fundo se repita */
     background-repeat: no-repeat;
+    /* Define a largura do elemento como 100% do contêiner pai */
     width: 100%;
+    /* Define a altura do elemento como 600 pixels */
     height: 600px;
+    /* Adiciona bordas arredondadas ao elemento com raio de 10 pixels */
     border-radius: 10px;
 }

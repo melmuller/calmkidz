@@ -84,7 +84,22 @@ input[type="text"], input[type="password"], input[type="email"] {
 }
 
 /* Estilização do botão de envio */
-button[type="submit"] {
+button[type="submit"]  {
+  font-family: "Quicksand", sans-serif; /* Fonte do botão */
+  background: #fd91f8; /* Cor de fundo do botão */
+  color: rgb(0, 0, 0); /* Cor do texto do botão */
+  border-radius: 30px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  border: none; /* Sem bordas */
+  outline: none; /* Remove o contorno padrão ao focar */
+  padding: 8px 0 8px 15px; /* Espaçamento interno */
+  font-size: 15px; /* Tamanho da fonte */
+  margin-top: 40px; /* Margem superior */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+/* Estilização do botão de envio */
+button[type="button"]  {
   font-family: "Quicksand", sans-serif; /* Fonte do botão */
   background: #fd91f8; /* Cor de fundo do botão */
   color: rgb(0, 0, 0); /* Cor do texto do botão */

@@ -2,6 +2,7 @@
 
 /* Reseta margens e preenchimentos de todos os elementos */
 * {
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
   margin: 0;
   padding: 0;
 }

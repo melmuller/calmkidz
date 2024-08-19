@@ -27,7 +27,3 @@ SELECT nome, email, senha FROM usuario WHERE email = "gabriel@gmail.com";
 
 delete from postagens
 	WHERE id > 0;
-
-
-
-

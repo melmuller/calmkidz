@@ -1,82 +1,103 @@
+/* Importa a fonte "Quicksand" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+/* Define o estilo básico do corpo da página */
 body {
-    font-family: "Quicksand", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
+    font-family: "Quicksand", sans-serif; /* Aplica a fonte "Quicksand" */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background-color: #ffffff; /* Define a cor de fundo como branca */
 }
 
+/* Estilo para o cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-between; /* Distribui o conteúdo com espaço entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 20px; /* Adiciona padding ao redor do cabeçalho */
+    background-color: #fff; /* Define a cor de fundo como branca */
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior cinza claro */
 }
 
+/* Estilo para o logo dentro do cabeçalho */
 #logo {
-    height: 8vh;
-    width: 6vw; 
-    margin: 0%;
-    padding: 10px;
+    height: 8vh; /* Define a altura do logo como 8% da altura da viewport */
+    width: 6vw; /* Define a largura do logo como 6% da largura da viewport */
+    margin: 0%; /* Remove a margem */
+    padding: 10px; /* Adiciona padding ao redor do logo */
 }
 
+/* Estilo para o botão de conta */
 .account {
-    background-color:  #eda3fc;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
+    background-color: #eda3fc; /* Define a cor de fundo do botão */
+    padding: 10px 20px; /* Adiciona padding interno */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+    color: #fff; /* Define a cor do texto como branco */
 }
 
+/* Estilo para os links de navegação */
 nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
+    margin: 0 10px; /* Adiciona margens laterais aos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000; /* Define a cor do texto como preto */
 }
 
+/* Estilo para o botão de login na navegação */
 nav .login {
-    padding: 5px 10px;
-    background-color: #ff69b4;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
+    padding: 5px 10px; /* Adiciona padding interno */
+    background-color: #ff69b4; /* Define a cor de fundo como rosa */
+    border: none; /* Remove a borda padrão */
+    color: #fff; /* Define a cor do texto como branco */
+    cursor: pointer; /* Altera o cursor para um ponteiro ao passar sobre o botão */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
 }
 
+/* Estilo para a área principal da página */
 main {
-    text-align: center;
-    padding: 20px;
+    text-align: center; /* Centraliza o texto dentro do main */
+    padding: 20px; /* Adiciona padding ao redor da área principal */
 }
 
+/* Estilo para o título principal */
 h1 {
-    margin-top: 20px;
-    font-size: 28px;
+    margin-top: 20px; /* Adiciona margem superior ao título */
+    font-size: 28px; /* Define o tamanho da fonte */
 }
 
+/* Estilo para os subtítulos */
 h2 {
-    font-size: 18px;
-    color: #666;
+    font-size: 18px; /* Define o tamanho da fonte */
+    color: #666; /* Define a cor do texto como cinza escuro */
 }
 
+/* Estilo para a seção de informações */
 .info {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: space-around; /* Distribui o conteúdo com espaço ao redor */
+    margin: 20px 0; /* Adiciona margem vertical */
 }
 
+/* Estilo para os cartões de informação */
 .card {
-    background-color: #fff8dc;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff8dc; /* Define a cor de fundo como um tom de amarelo claro */
+    padding: 20px; /* Adiciona padding interno */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    width: 30%; /* Define a largura dos cartões */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
 }
 
+/* Estilo para a seção de exercícios de respiração */
 .breathing-exercises {
-    background-color: #f0cff7;
-    padding: 20px;
+    background-color: #f0cff7; /* Define a cor de fundo como um tom de rosa claro */
+    padding: 20px; /* Adiciona padding interno */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    margin-top: 20px; /* Adiciona margem superior */
+}
+
+#video{
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
     border-radius: 10px;
-    margin-top: 20px;
 }

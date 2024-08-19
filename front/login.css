@@ -1,126 +1,141 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
- *{
+/* Reseta margens e paddings, define box-sizing e aplica a fonte padrão */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'poppins', sans-serif;
+  font-family: 'poppins', sans-serif; /* Fonte padrão global */
 }
 
+/* Define a estrutura básica da página */
 body {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  display: flex; /* Alinha os itens de forma flexível */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
 }
 
-
+/* Container principal do formulário */
 .container {
-  font-family: "Quicksand", sans-serif;
-  background-color: whitesmoke;
-  padding: 6px;
-  width: 450px;
-  height: 550px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 20px 0 rgb(160, 160, 160);
+  font-family: "Quicksand", sans-serif; /* Fonte do container */
+  background-color: whitesmoke; /* Cor de fundo do container */
+  padding: 6px; /* Espaçamento interno */
+  width: 450px; /* Largura fixa do container */
+  height: 550px; /* Altura fixa do container */
+  display: flex; /* Alinha os itens de forma flexível */
+  flex-direction: column; /* Layout em coluna */
+  align-items: center; /* Alinha itens no centro horizontalmente */
+  position: relative; /* Permite posicionamento absoluto dos elementos filhos */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassar o container */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 0 20px 0 rgb(160, 160, 160); /* Sombra do container */
 }
 
+/* Estilização do formulário */
 form {
-  font-family: "Quicksand", sans-serif;
-  position: absolute;
-  margin-top: 80px;
-  transition: .5s;
-  width: 300px;
-  height: 400px;
+  font-family: "Quicksand", sans-serif; /* Fonte do formulário */
+  position: absolute; /* Posiciona o formulário absolutamente dentro do container */
+  margin-top: 80px; /* Margem superior */
+  transition: .5s; /* Transição suave para mudanças */
+  width: 300px; /* Largura do formulário */
+  height: 400px; /* Altura do formulário */
 }
 
+/* Estilização do container de botões */
 .buttonsForm {
-  margin-top: 40px;
-  position: relative;
-  border-radius: 30px;
-  box-shadow: 0 0 7px 0 rgb(253, 217, 99);
+  margin-top: 40px; /* Margem superior */
+  position: relative; /* Permite posicionar elementos filhos */
+  border-radius: 30px; /* Bordas arredondadas */
+  box-shadow: 0 0 7px 0 rgb(253, 217, 99); /* Sombra do container de botões */
 }
 
+/* Estilização dos botões dentro do container de botões */
 .buttonsForm button {
-  font-family: "Quicksand", sans-serif;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  position: relative;
-  padding: 10px 29px;
+  font-family: "Quicksand", sans-serif; /* Fonte dos botões */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+  background: transparent; /* Fundo transparente */
+  border: none; /* Sem bordas */
+  position: relative; /* Permite posicionamento absoluto de elementos filhos */
+  padding: 10px 29px; /* Espaçamento interno */
 }
 
+/* Estilização da cor de fundo do botão ativo */
 .btnColor {
-  position: absolute;
-  width: 108px;
-  height: 100%;
-  background: linear-gradient(to right,  #fef6d4, #eda3fc);
-  border-radius: 30px;
-  transition: .3s;
+  position: absolute; /* Posiciona o botão de cor de fundo absolutamente dentro do botão */
+  width: 108px; /* Largura do botão de cor de fundo */
+  height: 100%; /* Altura total do botão de cor de fundo */
+  background: linear-gradient(to right, #fef6d4, #eda3fc); /* Gradiente de fundo */
+  border-radius: 30px; /* Bordas arredondadas */
+  transition: .3s; /* Transição suave para mudanças */
 }
 
+/* Estilização dos campos de entrada */
 input[type="text"], input[type="password"], input[type="email"] {
-  font-family: "Quicksand", sans-serif;
-  border: none;
-  justify-content: center;
-  margin-top: 50px;
-  border-radius: 60px;
-  padding: 8px 0 8px 35px;
-  outline: none;
-  width: 100%;
+  font-family: "Quicksand", sans-serif; /* Fonte dos campos de entrada */
+  border: none; /* Sem bordas */
+  justify-content: center; /* Alinha o texto ao centro */
+  margin-top: 50px; /* Margem superior */
+  border-radius: 60px; /* Bordas arredondadas */
+  padding: 8px 0 8px 35px; /* Espaçamento interno */
+  outline: none; /* Remove o contorno padrão ao focar */
+  width: 100%; /* Largura total */
 }
 
+/* Estilização do botão de envio */
 button[type="submit"] {
-  font-family: "Quicksand", sans-serif;
-  background: #fd91f8;
-  color: rgb(0, 0, 0);
-  border-radius: 30px;
-  width: 100%;
-  border: none;
-  outline: none;
-  padding: 8px 0 8px 15px;
-  font-size: 15px;
-  margin-top: 40px;
-  cursor: pointer;
+  font-family: "Quicksand", sans-serif; /* Fonte do botão */
+  background: #fd91f8; /* Cor de fundo do botão */
+  color: rgb(0, 0, 0); /* Cor do texto do botão */
+  border-radius: 30px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  border: none; /* Sem bordas */
+  outline: none; /* Remove o contorno padrão ao focar */
+  padding: 8px 0 8px 15px; /* Espaçamento interno */
+  font-size: 15px; /* Tamanho da fonte */
+  margin-top: 40px; /* Margem superior */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
 }
 
+/* Estilização da div de checkbox */
 .divCheck {
-  margin: 10px 0 0 5px;
-  width: 80%;
-  font-size: 13px;
+  margin: 10px 0 0 5px; /* Margem superior e lateral */
+  width: 80%; /* Largura do checkbox */
+  font-size: 13px; /* Tamanho da fonte */
 }
 
+/* Estilização do botão de login */
 #signin {
-  padding: 8px 0 8px 19px;
-  margin-top: 150px;
-  justify-content: center;
-  left: 55px;
+  padding: 8px 0 8px 19px; /* Espaçamento interno */
+  margin-top: 150px; /* Margem superior */
+  justify-content: center; /* Alinha o conteúdo ao centro */
+  left: 55px; /* Posiciona a esquerda */
 }
 
+/* Estilização do botão de registro */
 #signup {
-  left: 450px;
+  left: 450px; /* Posiciona a esquerda */
 }
 
+/* Estilização dos ícones dentro dos campos de entrada */
 i {
-  position: absolute;
-  left: 0;
-  padding: 10px 10px;
+  position: absolute; /* Posiciona os ícones absolutamente dentro do campo */
+  left: 0; /* Alinha à esquerda */
+  padding: 10px 10px; /* Espaçamento interno */
 }
 
+/* Estilização do ícone de email */
 .iEmail {
-  top: 40px;
+  top: 40px; /* Posiciona o ícone no topo */
 }
 
+/* Estilização do ícone de senha */
 .iPassword {
-  top: 114px;
+  top: 114px; /* Posiciona o ícone no topo */
 }
 
+/* Estilização do ícone de confirmação de senha */
 .iPassword2 {
-  top: 190px;
+  top: 190px; /* Posiciona o ícone no topo */
 }

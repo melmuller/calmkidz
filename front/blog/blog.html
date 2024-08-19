@@ -8,94 +8,94 @@
   <link rel="shortcut icon" href="/front/imagens/logotipo.png">
 </head>
 <body>
+    <!-- Cabeçalho principal do site -->
     <header class="main-header">
+      <!-- Logotipo do site -->
       <img class="logo" src="/front/imagens/Calmkidz - logo.png" alt="">
+      <!-- Links de navegação do cabeçalho -->
       <nav class="header-links">
-          <a href="#">Ansiedade</a>
-          <a href="#">Blog</a>
-          <a href="#">Sobre nós</a>
+          <!-- Link para a página de "Ansiedade" -->
+          <a href="/front/home.html">Ansiedade</a>
+          <!-- Link para a página "Sobre nós" -->
+          <a href="/front/sobre.html">Sobre nós</a>
+          <!-- Link para a página "Sua conta" -->
           <a href="#" class="account">Sua conta</a>
+          <!-- Botão para criar um novo post -->
           <button onclick="javascript:teste()" class="novo_post">+</button>
       </nav>
-  </header>
-  </header>
-
-
-  <!-- <div>
-    <input type="text" id="title" name="title">
-    <button class="button button--confirm" id="handleSubmit">
-      Comment
-    </button>
-  </div> -->
-
-  <main>
-    <div class="text">
-      <h1 class="titulo_blog">Blog CalmKidz</h1> 
-      <h3 class="texto_titulo">Escreva suas experiências e ajude outros usuários</h3>
-    </div>
-
-    <section class="section5">
-      <article class="container-1">
-          </div>
-          <div class="coluna">
-              <div class="nome-comentario"><h3>Mel Müller</h3></div>
-              <h4 class="data">28 de março de 2024<h4>
-              <div class="avaliar-comentario">
-                  <h3 class="nome-comentario">Title</h3>
-              </div>
-              <div class="texto-comentario">
-                  <p>
-                    Meu filho começou a apresentar sinais de ansiedade no ano passado, quando mudou de escola. Ele ficava nervoso todos os dias antes das aulas e começou a ter dificuldades para dormir. Encontrar este blog foi um alívio, pois percebi que não estamos sozinhos. As dicas para ajudar as crianças a se sentirem mais seguras na escola foram muito úteis. Agora, ele está mais tranquilo e conseguimos criar uma rotina que o ajuda a lidar melhor com as situações estressantes.
-                  </p>
-              </div>
-          </div>
-      </article>
-
-      <article class="container-2">
-          </div>
-          <div class="coluna">
-              <div class="nome-comentario"><h3>Júlia Isabel</h3></div>
-              <h4 class="data">19 de fevereiro de 2024<h4>
-              <div class="avaliar-comentario">
-                  <h3 class="nome-comentario">Title</h3>
-              </div>
-              <div class="texto-comentario">
-                 <p>
-                  Sou professor do ensino fundamental e sempre me preocupo com o bem-estar dos meus alunos. A ansiedade é um problema comum, mas muitas vezes invisível. Ler os relatos aqui me fez refletir sobre como podemos criar um ambiente mais acolhedor na sala de aula. Comecei a implementar algumas estratégias sugeridas no blog e já percebo uma mudança positiva na atitude dos alunos, que parecem mais confortáveis e menos ansiosos.
-                 </p>
-              </div>
-          </div>
-      </article>
-
-      
-          <div id="post1">
-
-          </div>
-      </article>
-      <div id="messages">
-        <!-- Mensagens enviadas aparecerão aqui -->
-        <!-- <p id="text-message"></p> -->
-      </div>
-    </section>
-  </main>
+    </header>
   
-  <section id="blog-add">
-  <form class="form-blog" name="postForm" ng-submit=" blog.addPost()" novalidate>
-    <h4 class="title">Title</h4>
-    <input id="title" type="text" />
-    <h4 class="tile">Body</h4>
-    <textarea id="campo-blog" rows="10"></textarea>
+    <!-- Conteúdo principal do site -->
+    <main>
+      <!-- Seção de texto de introdução -->
+      <div class="text">
+        <h1 class="titulo_blog">Blog CalmKidz</h1> 
+        <h3 class="texto_titulo">Escreva suas experiências e ajude outros usuários</h3>
+      </div>
 
+      <!-- Seção que contém os artigos/comentários -->
+      <section class="section5">
+        <!-- Primeiro artigo/comentário -->
+        <article class="container-1">
+            <div class="coluna">
+                <!-- Nome do autor do comentário -->
+                <div class="nome-comentario"><h3>Mel Müller</h3></div>
+                <!-- Data do comentário -->
+                <h4 class="data">28 de março de 2024<h4>
+                <!-- Título do comentário -->
+                <div class="avaliar-comentario">
+                    <h3 class="nome-comentario">Title</h3>
+                </div>
+                <!-- Texto do comentário -->
+                <div class="texto-comentario">
+                    <p>
+                      Meu filho começou a apresentar sinais de ansiedade no ano passado, quando mudou de escola. Ele ficava nervoso todos os dias antes das aulas e começou a ter dificuldades para dormir. Encontrar este blog foi um alívio, pois percebi que não estamos sozinhos. As dicas para ajudar as crianças a se sentirem mais seguras na escola foram muito úteis. Agora, ele está mais tranquilo e conseguimos criar uma rotina que o ajuda a lidar melhor com as situações estressantes.
+                    </p>
+                </div>
+            </div>
+        </article>
 
+        <!-- Segundo artigo/comentário -->
+        <article class="container-2">
+            <div class="coluna">
+                <!-- Nome do autor do comentário -->
+                <div class="nome-comentario"><h3>Júlia Isabel</h3></div>
+                <!-- Data do comentário -->
+                <h4 class="data">19 de fevereiro de 2024<h4>
+                <!-- Título do comentário -->
+                <div class="avaliar-comentario">
+                    <h3 class="nome-comentario">Title</h3>
+                </div>
+                <!-- Texto do comentário -->
+                <div class="texto-comentario">
+                   <p>
+                    Sou professor do ensino fundamental e sempre me preocupo com o bem-estar dos meus alunos. A ansiedade é um problema comum, mas muitas vezes invisível. Ler os relatos aqui me fez refletir sobre como podemos criar um ambiente mais acolhedor na sala de aula. Comecei a implementar algumas estratégias sugeridas no blog e já percebo uma mudança positiva na atitude dos alunos, que parecem mais confortáveis e menos ansiosos.
+                   </p>
+                </div>
+            </div>
+        </article>
+
+        <!-- Seção onde novos posts podem ser adicionados (atualmente vazia) -->
+        <div id="post1">
+        </div>
+      </section>
+    </main>
     
-    <input id="handleSubmit" type="submit" value="Submit" onclick="javascript:teste2()" />
-  </select></form>
-</section>
-
-
-
-
-  <footer></footer>
-  <script src="blog.js"></script>
+    <!-- Formulário para adicionar novos posts ao blog -->
+    <section id="blog-add">
+      <form class="form-blog" name="postForm" ng-submit=" blog.addPost()" novalidate>
+        <!-- Campo de título do novo post -->
+        <h4 class="title">Title</h4>
+        <input id="title" type="text" />
+        <!-- Campo de corpo do texto do novo post -->
+        <h4 class="tile">Body</h4>
+        <textarea id="campo-blog" rows="10"></textarea>
+        <!-- Botão para submeter o novo post -->
+        <input id="handleSubmit" type="submit" value="Submit" onclick="javascript:teste2()" />
+      </form>
+    </section>
+  
+    <!-- Inclusão do arquivo de script JavaScript -->
+    <script src="blog.js"></script>
 </body>
 </html>

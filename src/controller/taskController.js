@@ -1,67 +1,79 @@
+// Importa a configuração da conexão com o banco de dados
 const connection = require('../config/db');
+// Importa e carrega as variáveis de ambiente
 const dotenv = require('dotenv').config();
 
+// Função assíncrona para armazenar uma nova tarefa (postagem) no banco de dados
 async function storeTask(request, response) {
+    // Obtém os parâmetros do corpo da requisição e os coloca em um array
     const params = Array(
-        request.body.title,
-        request.body.blog
-    )
+        request.body.title, // Título da postagem
+        request.body.blog   // Conteúdo da postagem
+    );
 
-    const query = "INSERT INTO postagens(titulo, conteudo) VALUES(?,?)"
+    // Consulta SQL para inserir uma nova postagem na tabela 'postagens'
+    const query = "INSERT INTO postagens(titulo, conteudo) VALUES(?,?)";
 
+    // Executa a consulta SQL
     connection.query(query, params, (err, results) => {
-        console.log("Entrou aqui")
-        console.log(query, params, results)
+        // Log para depuração: mostra os valores e resultados da consulta
+        console.log("Entrou aqui");
+        console.log(query, params, results);
+
+        // Verifica se a consulta foi bem-sucedida e retorna a resposta apropriada
         if (results) {
+            // Responde com sucesso se a postagem for inserida corretamente
             response
                 .status(201)
                 .json({
-                    succes: true,
+                    success: true, // Corrigido 'succes' para 'success'
                     message: "Postado!",
                     data: results
-                })
+                });
         } else {
+            // Responde com erro se houver um problema ao inserir a postagem
             response
                 .status(400)
                 .json({
-                    succes: false,
+                    success: false, // Corrigido 'succes' para 'success'
                     message: "Deu problema!",
                     data: err
-                })
+                });
         }
-    })
+    });
 }
-
+// Função assíncrona para buscar todas as postagens do banco de dados
 async function buscandoCom(request, response) {
-    // async function storeTask(request, response): Declara uma função chamada storeTask, que recebe um objeto request e um objeto response como parâmetros.
-
+    // Define a consulta SQL para selecionar todas as postagens da tabela 'postagens'
     const query = "SELECT * FROM postagens";
 
-    // Define a consulta SQL para inserir uma nova postagem na tabela postagens com os campos titulo e conteudo.
-
+    // Executa a consulta SQL
     connection.query(query, (err, results) => {
+        // Verifica se a consulta foi bem-sucedida e retorna a resposta apropriada
         if (results) {
+            // Responde com sucesso se a consulta for bem-sucedida
             response
-                .status(201)
+                .status(200) // Corrigido de 201 para 200 para uma operação GET
                 .json({
-                    succes: true,
+                    success: true, // Corrigido 'succes' para 'success'
                     message: "Sucesso com o GET!",
                     data: results
-                })
+                });
         } else {
+            // Responde com erro se houver um problema ao buscar as postagens
             response
                 .status(400)
                 .json({
-                    succes: false,
+                    success: false, // Corrigido 'succes' para 'success'
                     message: "Deu problema no GET!",
                     data: err
-                })
+                });
         }
-    })
+    });
 }
 
+// Exporta as funções storeTask e buscandoCom para serem usadas em outros arquivos
 module.exports = {
     storeTask,
     buscandoCom
-}
-
+};

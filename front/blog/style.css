@@ -1,242 +1,240 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+/* Reseta margens e preenchimentos de todos os elementos */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Estilo do cabeçalho principal */
 .main-header {
-    font-family: "Quicksand", sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #f5eeee;
-
+    font-family: "Quicksand", sans-serif; /* Define a fonte */
+    display: flex; /* Utiliza o flexbox para layout */
+    justify-content: space-between; /* Espaçamento uniforme entre elementos */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo branco */
+    border-bottom: 1px solid #f5eeee; /* Linha inferior do cabeçalho */
 }
 
+/* Estilo da logo */
 .logo {
-  height: 8vh;
-  width: 6vw; 
-  margin: 0%;
-  padding: 10px;
+  height: 8vh; /* Altura da logo */
+  width: 6vw;  /* Largura da logo */
+  margin: 0%; /* Margem */
+  padding: 10px; /* Preenchimento */
 }
 
+/* Estilo da barra de pesquisa */
 .search-bar input[type="text"] {
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  outline: none;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  padding: 8px; /* Preenchimento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 4px 0 0 4px; /* Define bordas arredondadas */
+  outline: none; /* Remove a borda de foco padrão */
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 400; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
 }
 
+/* Estilo do botão da barra de pesquisa */
 .search-bar button {
-  padding: 8px 15px;
-  font-size: 16px;
-  background-color:  #eda3fc;
-  color: #fff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  padding: 8px 15px; /* Preenchimento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  background-color:  #eda3fc; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 0 4px 4px 0; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 400; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
 }
 
+/* Estilo dos links do cabeçalho */
 .header-links a {
-  color: #000000;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 16px;
-  transition: color 0.3s ease;
+  color: #000000; /* Cor do texto dos links */
+  text-decoration: none; /* Remove a sublinhado padrão dos links */
+  margin-left: 25px; /* Margem à esquerda */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: color 0.3s ease; /* Transição suave para a mudança de cor */
 }
 
+/* Estilo do botão "novo post" */
 .novo_post {
-  margin-left: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  background-color:   #eda3fc;
-  cursor: pointer;
-  transition: background-color 0.3s ease; 
+  margin-left: 20px; /* Margem à esquerda */
+  padding: 10px 20px; /* Preenchimento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  color: white; /* Cor do texto */
+  background-color: #eda3fc; /* Cor de fundo */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
 }
 
+/* Efeitos de hover e active para o botão "novo post" */
 .novo_post:hover {
-  background-color: rgb(216, 216, 98);
+  background-color: rgb(216, 216, 98); /* Cor de fundo ao passar o mouse */
 }
 
 .novo_post:active {
-  background-color: rgb(216, 216, 98); 
+  background-color: rgb(216, 216, 98); /* Cor de fundo ao clicar */
 }
 
+/* Estilo do título do blog */
 .titulo_blog {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color:  #000000;
-  margin-top: 40px;
-
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 600; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  color: #000000; /* Cor do texto */
+  margin-top: 40px; /* Margem superior */
 }
 
+/* Centraliza o texto */
 .text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: flex; /* Utiliza o flexbox para layout */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Alinha os itens em uma coluna */
 }
 
+/* Estilo do título de texto */
 .texto_titulo {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-    color: #666;
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 600; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  color: #666; /* Cor do texto */
 }
 
+/* Estilo dos artigos na seção 5 */
 .section5 article {
-    width: 1100px;
-    height: 180px;
-    display: flex;
-    max-width: 80vw;
-    color: #000000;
-
+  width: 1100px; /* Largura do artigo */
+  height: 180px; /* Altura do artigo */
+  display: flex; /* Utiliza o flexbox para layout */
+  max-width: 80vw; /* Largura máxima de 80% da viewport */
+  color: #000000; /* Cor do texto */
 }
 
-.container-1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
+/* Centraliza e alinha elementos dentro dos containers */
+.container-1,
+.container-2,
+.container-3 {
+  display: flex; /* Utiliza o flexbox para layout */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  padding: 0 0 20px; /* Espaçamento inferior para o container-2 */
+  color: black; /* Define a cor do texto como preto para o container-1 */
 }
 
-.container-2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 20px;
-}
-
-.container-3{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Estilo das colunas */
 .coluna {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 950px;
-    height: 150px;
+  margin-top: 10px; /* Margem superior */
+  display: flex; /* Utiliza o flexbox para layout */
+  flex-direction: column; /* Alinha os itens em uma coluna */
+  width: 950px; /* Largura da coluna */
+  height: 150px; /* Altura da coluna */
 }
 
+/* Estilo do nome no comentário */
 .nome-comentario {
-    display: flex;
-    align-items: center;
-    width: auto;
-    height: 50px;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-    transition: 0.4s;
+  display: flex; /* Utiliza o flexbox para layout */
+  align-items: center; /* Centraliza verticalmente */
+  width: auto; /* Largura automática */
+  height: 50px; /* Altura do nome do comentário */
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 400; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  transition: 0.4s; /* Transição suave */
 }
 
+/* Estilo da avaliação do comentário */
 .avaliar-comentario {
-    display: flex;
-    align-items: center;
-    width: auto;
-    gap: 3px;
-    height: 30px;
-
-    transition: 0.4s;
+  display: flex; /* Utiliza o flexbox para layout */
+  align-items: center; /* Centraliza verticalmente */
+  width: auto; /* Largura automática */
+  gap: 3px; /* Espaçamento entre os itens */
+  height: 30px; /* Altura da avaliação do comentário */
+  transition: 0.4s; /* Transição suave */
 }
 
+/* Estilo da imagem na avaliação do comentário */
 .avaliar-comentario img {
-    width: 125px;
+  width: 125px; /* Largura da imagem */
 }
 
+/* Estilo da data */
 .data {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  color: #caa609;
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 100; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  color: #caa609; /* Cor da data */
 }
 
+/* Estilo do título na avaliação do comentário */
 .avaliar-comentario h2 {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    margin-left: 10px;
-    opacity: 0.7;
-    height: 30px;
-    margin-top: 15px;
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 100; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  margin-left: 10px; /* Margem à esquerda */
+  opacity: 0.7; /* Define a opacidade */
+  height: 30px; /* Altura do título */
+  margin-top: 15px; /* Margem superior */
 }
 
+/* Estilo do texto do comentário */
 .texto-comentario {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    display: flex;
-    width: auto;
-    height: 80px;
-
-    transition: 0.4s;
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 100; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
+  display: flex; /* Utiliza o flexbox para layout */
+  width: auto; /* Largura automática */
+  height: 80px; /* Altura do texto do comentário */
+  transition: 0.4s; /* Transição suave */
 }
 
-#blog-add{
-  width: 500px;
-  height: 350px;
-  position: absolute;
-  top: 100px;
-  right: 10px;
-  background-color: #fdcee1;
-  display: none;
-  border-radius: 10px;
+/* Estilo do modal de adição de blog */
+#blog-add {
+  width: 500px; /* Largura do modal */
+  height: 350px; /* Altura do modal */
+  position: absolute; /* Posição absoluta */
+  top: 100px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  background-color: #fdcee1; /* Cor de fundo do modal */
+  display: none; /* Inicialmente, o modal está oculto */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
-.form-blog{
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+/* Estilo do formulário de adição de blog */
+.form-blog {
+  display: flex; /* Utiliza o flexbox para layout */
+  width: 100%; /* Largura completa */
+  height: 100%; /* Altura completa */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  flex-direction: column; /* Alinha os itens em uma coluna */
 }
 
-.campo-blog{
-  width: 70%;
-  border-radius: 4px;
-  border: 0 solid transparent;
-  border-bottom: 2px solid   #eda3fc;
-  margin-top: 5px;
-  margin-bottom: 15px;
+/* Estilo dos campos do formulário de blog */
+.campo-blog {
+  width: 70%; /* Largura dos campos */
+  border-radius: 4px; /* Bordas arredondadas */
+  border: 0 solid transparent; /* Borda transparente */
+  border-bottom: 2px solid #eda3fc; /* Borda inferior colorida */
+  margin-top: 5px; /* Margem superior */
+  margin-bottom: 15px; /* Margem inferior */
 }
 
-#campo-title{
-  height: 40px;
+/* Estilo específico para o campo de título */
+#campo-title {
+  height: 40px; /* Altura do campo */
 }
 
-.title {
-   font-family: "Quicksand", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
-.enviar {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-
+/* Estilos para diferentes elementos de texto */
+.title,
+.enviar,
 .title-comentario {
-    font-family: "Quicksand", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+  font-family: "Quicksand", sans-serif; /* Define a fonte */
+  font-weight: 100; /* Define o peso da fonte */
+  font-style: normal; /* Define o estilo da fonte */
 }

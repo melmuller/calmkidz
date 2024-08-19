@@ -10,30 +10,50 @@
   <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <img src="/front/imagens/familia.png" alt="">
+  <!-- Imagem de fundo ou logo -->
+  <img src="/front/imagens/familia.png" alt="Imagem de fundo">
+  
+  <!-- Container principal do formulário -->
   <div class="container">
+    <!-- Container para os botões de login e cadastro -->
     <div class="buttonsForm">
+      <!-- Div para a cor de fundo do botão -->
       <div class="btnColor"></div>
+      <!-- Botão para acessar a página de login -->
       <button id="btnSignin">Login</button>
+      <!-- Botão para acessar a página de cadastro -->
       <button id="btnSignup">Cadastro</button>
     </div>
 
+    <!-- Formulário de login -->
     <form id="signin">
+      <!-- Campo de entrada para o e-mail -->
       <input type="text" placeholder="Email" id="email" required />
+      <!-- Campo de entrada para a senha -->
       <input type="password" placeholder="Senha" id="senha" required />
+      <!-- Botão para enviar o formulário de login -->
       <button type="submit" id="handleSubmit">Entrar</button>
     </form>
 
+    <!-- Formulário de cadastro -->
     <form id="signup">
+      <!-- Campo de entrada para o nome -->
       <input type="text" id="nome" placeholder="Nome" required />
+      <!-- Campo de entrada para o e-mail -->
       <input type="email" id="email" placeholder="Email" required />
+      <!-- Campo de entrada para a senha -->
       <input type="password" id="senha" placeholder="Senha" required />
+      <!-- Campo de entrada para confirmar a senha -->
       <input type="password" id="confirmarsenha" placeholder="Confirmar senha" required />
+      <!-- Div para o botão de cadastro -->
       <div class="divCheck">
-      <button type="submit" >Cadastre-se</button>
+        <!-- Botão para enviar o formulário de cadastro -->
+        <button type="submit">Cadastre-se</button>
+      </div>
     </form>
   </div>
 
+  <!-- Scripts JavaScript para funcionalidades -->
   <script src="script.js"></script>
   <script src="cadastro.js"></script>
 </body>

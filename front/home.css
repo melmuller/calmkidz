@@ -1,137 +1,159 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+/* Estilo da logo com ID logo */
 #logo {
-    height: 8vh;
-    width: 6vw; 
-    margin: 0%;
-    padding: 10px;
+    height: 8vh; /* Altura da logo em 8% da altura da viewport */
+    width: 6vw;  /* Largura da logo em 6% da largura da viewport */
+    margin: 0%; /* Remove margem externa */
+    padding: 10px; /* Preenchimento interno de 10px */
 }
 
+/* Estilo do corpo da página */
 body {
-    font-family: "Quicksand", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    font-family: "Quicksand", sans-serif; /* Define a fonte Quicksand */
+    margin: 0; /* Remove a margem padrão do corpo */
+    padding: 0; /* Remove o preenchimento padrão do corpo */
+    background-color: #f9f9f9; /* Cor de fundo cinza claro */
 }
 
+/* Estilo do cabeçalho */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    display: flex; /* Flexbox para layout */
+    justify-content: space-between; /* Espaço entre os elementos do cabeçalho */
+    align-items: center; /* Alinhamento vertical centralizado */
+    padding: 20px; /* Preenchimento interno de 20px */
+    background-color: #fff; /* Fundo branco */
+    border-bottom: 1px solid #ddd; /* Borda inferior cinza clara */
 }
 
+/* Estilo do logo dentro do cabeçalho */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 24px; /* Tamanho da fonte do logo */
+    font-weight: bold; /* Fonte em negrito */
 }
 
+/* Estilo da barra de pesquisa */
 .search-bar input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 10px; /* Preenchimento interno de 10px */
+    font-size: 16px; /* Tamanho da fonte */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 5px; /* Bordas arredondadas de 5px */
 }
 
+/* Estilo dos links de navegação */
 nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
+    margin: 0 10px; /* Margem horizontal de 10px */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #333; /* Cor do texto em cinza escuro */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
+/* Estilo da seção de conta de usuário */
 .account {
-    background-color:  #eda3fc;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: #fff;
+    background-color: #eda3fc; /* Fundo roxo claro */
+    padding: 10px 20px; /* Preenchimento interno de 10px verticalmente e 20px horizontalmente */
+    border-radius: 5px; /* Bordas arredondadas de 5px */
+    color: #fff; /* Cor do texto branca */
 }
 
+/* Estilo do conteúdo principal */
 main {
-    padding: 20px;
+    padding: 20px; /* Preenchimento interno de 20px */
 }
 
+/* Estilo da imagem na seção meninoconfuso */
 .meninoconfuso {
-    height: 210px;
-    width: 550px;
+    height: 210px; /* Altura da imagem */
+    width: 550px;  /* Largura da imagem */
 }
 
-
+/* Estilo da seção de sintomas */
 .symptoms-section {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox para layout */
+    align-items: center; /* Alinhamento vertical centralizado */
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 10px; /* Bordas arredondadas de 10px */
+    padding: 20px; /* Preenchimento interno de 20px */
+    margin-bottom: 20px; /* Margem inferior de 20px */
 }
 
+/* Estilo da imagem dentro da seção de sintomas */
 .symptoms-section img {
-    max-width: 150px;
-    margin-right: 20px;
+    max-width: 150px; /* Largura máxima da imagem */
+    margin-right: 20px; /* Margem direita de 20px */
 }
 
+/* Estilo do texto dentro da seção de sintomas */
 .symptoms-text {
-    flex: 1;
+    flex: 1; /* Faz o texto ocupar o espaço restante */
 }
 
+/* Estilo dos títulos dentro da seção de sintomas */
 .symptoms-text h2 {
-    color: #333;
+    color: #333; /* Cor do texto em cinza escuro */
 }
 
+/* Estilo da lista dentro da seção de sintomas */
 .symptoms-text ul {
-    list-style: none;
-    padding: 0;
-    color: #666;
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento interno da lista */
+    color: #666; /* Cor do texto em cinza claro */
 }
 
+/* Estilo dos itens da lista dentro da seção de sintomas */
 .symptoms-text ul li {
-    margin: 5px 0;
+    margin: 5px 0; /* Margem vertical de 5px entre itens */
 }
 
+/* Estilo dos links dentro da seção de sintomas */
 .symptoms-text a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007BFF;
-    text-decoration: none;
+    display: inline-block; /* Exibição como bloco inline */
+    margin-top: 10px; /* Margem superior de 10px */
+    color: #007BFF; /* Cor do texto em azul */
+    text-decoration: none; /* Remove sublinhado dos links */
 }
 
+/* Estilo da seção de dicas */
 .tips-section {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Flexbox para layout */
+    justify-content: space-around; /* Espaço entre os elementos */
 }
 
+/* Estilo de cada dica na seção de dicas */
 .tip {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 30%;
+    text-align: center; /* Alinhamento de texto centralizado */
+    background-color: #fff; /* Fundo branco */
+    padding: 20px; /* Preenchimento interno de 20px */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    border-radius: 10px; /* Bordas arredondadas de 10px */
+    width: 30%; /* Largura de 30% do contêiner pai */
 }
 
+/* Estilo das imagens dentro das dicas */
 .tip img {
-    max-width: 100px;
-    margin-bottom: 10px;
+    max-width: 100px; /* Largura máxima da imagem */
+    margin-bottom: 10px; /* Margem inferior de 10px */
 }
 
+/* Estilo do texto dentro das dicas */
 .tip p {
-    color: #333;
-    text-decoration: none;
+    color: #333; /* Cor do texto em cinza escuro */
+    text-decoration: none; /* Remove sublinhado do texto */
 }
 
+/* Estilo da dica com transição de efeitos */
 .tip {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para transformação e sombra */
 }
 
+/* Efeito de hover na dica */
 .tip:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Aumenta a escala da dica em 5% */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra ao redor da dica */
 }
 
-a{
-    text-decoration: none;
+/* Estilo global dos links */
+a {
+    text-decoration: none; /* Remove sublinhado dos links */
 }

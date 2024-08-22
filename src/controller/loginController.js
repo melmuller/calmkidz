@@ -4,8 +4,7 @@ const connection = require('../config/db');
 // Função assíncrona para realizar o login
 async function login(request, response) {
     // Obtém o email do corpo da requisição e o coloca em um array
-    const email = Array(request.body.email);
-    console.log(request.body.email);
+    const email = Array(request.query.email);
 
     // Consulta SQL para selecionar usuário com base no email fornecido
     const query = "SELECT nome, email, senha FROM usuario WHERE email = ?;";
@@ -17,18 +16,21 @@ async function login(request, response) {
         if (results.length > 0) {
             
             // Obtém a senha fornecida e a senha recuperada do banco de dados
-            const password = request.body.password;
+            const password = request.query.senha;
             const passwordQuery = results[0].senha;
+            const conta = results[0];
 
             // Compara a senha fornecida com a senha recuperada
             if (password === passwordQuery) {
+                //deleta senha para localstorage
+                delete conta.senha;
                 // Responde com sucesso se as senhas coincidirem
                 response
                 .status(200)
                 .json({
                     success: true,
                     message: "Sucesso",
-                    data: results
+                    data: conta
                 });
         
             } else {

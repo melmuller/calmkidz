@@ -39,7 +39,7 @@ form {
   position: absolute; /* Posiciona o formulário absolutamente dentro do container */
   margin-top: 80px; /* Margem superior */
   transition: .5s; /* Transição suave para mudanças */
-  width: 300px; /* Largura do formulário */
+  width: 90%; /* Largura do formulário */
   height: 400px; /* Altura do formulário */
 }
 
@@ -99,7 +99,21 @@ button[type="submit"]  {
 }
 
 /* Estilização do botão de envio */
-button[type="button"]  {
+.cadastre  {
+  font-family: "Quicksand", sans-serif; /* Fonte do botão */
+  background: #fd91f8; /* Cor de fundo do botão */
+  color: rgb(0, 0, 0); /* Cor do texto do botão */
+  border-radius: 30px; /* Bordas arredondadas */
+  width: 100%; /* Largura total */
+  border: none; /* Sem bordas */
+  outline: none; /* Remove o contorno padrão ao focar */
+  padding: 8px 0 8px 15px; /* Espaçamento interno */
+  font-size: 15px; /* Tamanho da fonte */
+  margin-top: 40px; /* Margem superior */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+}
+
+.login  {
   font-family: "Quicksand", sans-serif; /* Fonte do botão */
   background: #fd91f8; /* Cor de fundo do botão */
   color: rgb(0, 0, 0); /* Cor do texto do botão */

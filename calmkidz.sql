@@ -6,7 +6,6 @@ CREATE TABLE usuario (
   id int auto_increment NOT NULL PRIMARY KEY,
   nome varchar(255) NOT NULL,
   email varchar(255) NOT NULL UNIQUE,
-  idade int NOT NULL,
   senha varchar(255) NOT NULL,
   data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -20,7 +19,7 @@ CREATE TABLE postagens (
 
 select * from usuario;
 
-INSERT INTO usuario(nome, email, idade, senha) VALUES ("Gabriel","gabriel@gmail.com", 27, "122");
+INSERT INTO usuario(nome, email, idade, senha) VALUES ("Gabriel","gabriel@gmail.com", "122");
 
 SELECT nome, email, senha FROM usuario WHERE email = "gabriel@gmail.com";
 

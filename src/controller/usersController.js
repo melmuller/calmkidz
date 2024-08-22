@@ -8,13 +8,13 @@ async function storeUser(request, response) {
     
     // Obtém os parâmetros do corpo da requisição e os coloca em um array
     const params = Array(
-        request.body.name,     // Nome do usuário
+        request.body.nome,     // Nome do usuário
         request.body.email,    // Email do usuário
-        request.body.password  // Senha do usuário
+        request.body.senha // Senha do usuário
     );
 
     // Consulta SQL para inserir um novo usuário na tabela 'users'
-    const query = "INSERT INTO users(name, email, password) VALUES (?,?,?)";
+    const query = "INSERT INTO usuario(nome, email, senha) VALUES (?,?,?)";
 
     // Executa a consulta SQL
     connection.query(query, params, (err, results) => {

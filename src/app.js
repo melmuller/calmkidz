@@ -9,6 +9,8 @@ const cors = require("cors");
 
 // Importa as rotas definidas para tarefas
 const router = require("./routes/taskRoutes");
+const userrouter = require("./routes/usersRouter");
+const loginrouter = require('./routes/loginRouter');
 
 // Cria uma nova instância do aplicativo Express
 const app = express();
@@ -19,19 +21,13 @@ app.use(express.json());
 // Middleware para permitir CORS
 app.use(cors());
 
-// Importa as rotas definidas para usuários e login
-const usersRouter = require('./routes/usersRouter');
-const loginRouter = require('./routes/loginRouter');
-
 // Prefixo para as rotas da API
 app.use("/api", router);
+app.use("/api", userrouter);
+app.use('/api', loginrouter);
 
 // Configura a porta do servidor, utilizando a variável de ambiente PORT ou a porta 3008 por padrão
 app.set('port', process.env.PORT || 3008);
-
-// Define os prefixos das rotas para usuários e login
-app.use('/api', usersRouter);
-app.use('/api', loginRouter);
 
 // Exporta o aplicativo para ser utilizado em outros arquivos
 module.exports = app;

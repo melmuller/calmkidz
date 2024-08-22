@@ -1,4 +1,5 @@
-document.getElementById("cadastre").onclick = async function() {
+document.getElementById("cadastre").onclick = async function(event) {
+    event.preventDefault()
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("emailCadastro").value;
     let senha = document.getElementById("senhaCadastro").value;
@@ -12,6 +13,7 @@ document.getElementById("cadastre").onclick = async function() {
     
     let data = { nome, email, senha, confirmarsenha };
 
+    //faz uma requisição tipo post para criar uma linha no banco
     try {
         const response = await fetch('http://localhost:3003/api/user/create', {
             method: "POST",
@@ -23,6 +25,7 @@ document.getElementById("cadastre").onclick = async function() {
 
         if (result.success) {
             alert("Cadastro realizado com sucesso!");
+            window.location.reload()
         } else {
             alert(result.message);
         }

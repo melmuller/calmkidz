@@ -28,33 +28,33 @@
     <!-- Formulário de login -->
     <form id="signin">
       <!-- Campo de entrada para o e-mail -->
-      <input type="text" placeholder="Email" id="emailLogin" required />
+      <input type="text" placeholder="Email" id="emailLogin" name="emailLogin" required />
       <!-- Campo de entrada para a senha -->
-      <input type="password" placeholder="Senha" id="senhaLogin" required />
+      <input type="password" placeholder="Senha" id="senhaLogin" name="senhaLogin" required />
       <!-- Botão para enviar o formulário de login -->
-      <button type="submit" id="handleSubmit">Entrar</button>
+      <button class="login" id="handleSubmit">Entrar</button>
     </form>
 
     <!-- Formulário de cadastro -->
     <form id="signup">
       <!-- Campo de entrada para o nome -->
-      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="text" id="nome" name="nome" placeholder="Nome" required />
       <!-- Campo de entrada para o e-mail -->
-      <input type="email" id="emailCadastro" placeholder="Email" required />
+      <input type="email" id="emailCadastro" name="emailCadastro" placeholder="Email" required />
       <!-- Campo de entrada para a senha -->
-      <input type="password" id="senhaCadastro" placeholder="Senha" required />
+      <input type="password" id="senhaCadastro" name="senhaCadastro" placeholder="Senha" required />
       <!-- Campo de entrada para confirmar a senha -->
-      <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required />
+      <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirmar senha" required />
       <!-- Div para o botão de cadastro -->
       <div class="divCheck">
         <!-- Botão para enviar o formulário de cadastro -->
-        <button type="button" id="cadastre">Cadastre-se</button>
+        <button class="cadastre" id="cadastre">Cadastre-se</button>
       </div>
     </form>
   </div>
 
   <!-- Scripts JavaScript para funcionalidades -->
-  <script src="script.js"></script>
+  <script src="script.js" type="module"></script>
   <script src="cadastro.js"></script>
 </body>
 </html>

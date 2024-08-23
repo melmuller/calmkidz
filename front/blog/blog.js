@@ -6,7 +6,7 @@ let post1 = document.getElementById("post1")
 
 async function buscandoPosts() {
   // GET
-  const response = await fetch('http://localhost:3012/api/buscandoPosts', {
+  const response = await fetch('http://localhost:3003/api/buscandoPosts', {
       method: "GET",
       headers: { "Content-type": "application/json;charset=UTF-8" }
   });
@@ -15,7 +15,25 @@ async function buscandoPosts() {
   console.log(content)
   
   for (let i = 0; i < content.data.length; i++) {
-    post1.innerHTML += `<p>${content.data[i].conteudo}</p>`
+    post1.innerHTML += `
+
+    <article class="container-1">
+    <div class="coluna">
+       
+        <!-- Título do comentário -->
+        <div class="avaliar-comentario">
+            <h3 class="nome-comentario">${content.data[i].titulo}</h3>
+        </div>
+        <!-- Texto do comentário -->
+        <div class="texto-comentario">
+            <p>
+              ${content.data[i].conteudo}
+            </p>
+        </div>
+        <hr>
+    </div>
+    </article>
+    `
   } 
 };
 

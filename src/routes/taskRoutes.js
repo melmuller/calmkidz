@@ -8,9 +8,39 @@ const router = Router();
 const { storeTask, buscandoCom } = require("../controller/taskController");
 
 // Define a rota POST para o endpoint '/store/task', que utiliza a função storeTask
+/**
+ * @swagger
+ * /task/:id:
+ *   post:
+ *     summary: Define a rota post
+ *     responses: 
+ *       200:
+ *         description: Post do blog
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ */
 router.post("/store/task", storeTask);
 
 // Define a rota GET para o endpoint '/buscandoPosts', que utiliza a função buscandoCom
+/**
+ * @swagger
+ * /task/:id:
+ *   get:
+ *     summary: Retorna a publicação
+ *     responses:
+ *       200:
+ *         description: Publicação no blog
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ */
 router.get("/buscandoPosts", buscandoCom);
 
 // Exporta o roteador para ser usado em outros arquivos

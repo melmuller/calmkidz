@@ -12,8 +12,12 @@ async function buscandoPosts() {
   });
 
   let content = await response.json();
-  console.log(content)
-  
+  console.log("content: ", content.data);
+  //tentando inserir o nome na postagem buscando os valores pelo localstorage
+  let conta = localStorage.getItem('contaLogada')
+  //o indice é o valor do caractere como se fosse um array de string
+  console.log(conta[0]);
+
   for (let i = 0; i < content.data.length; i++) {
     post1.innerHTML += `
 

@@ -13,11 +13,7 @@ async function buscandoPosts() {
 
   let content = await response.json();
   console.log("content: ", content.data);
-  //tentando inserir o nome na postagem buscando os valores pelo localstorage
-  let conta = localStorage.getItem('contaLogada')
-  //o indice é o valor do caractere como se fosse um array de string
-  console.log(conta[0]);
-
+  
   for (let i = 0; i < content.data.length; i++) {
     post1.innerHTML += `
 
@@ -55,7 +51,6 @@ function teste2(){
 }
 
 // Define o texto do elemento com ID text-message para 'teste2'.
-
 let button = document.getElementById("handleSubmit");
 
 button.onclick = async function(event) {
@@ -64,12 +59,16 @@ button.onclick = async function(event) {
   let title = document.querySelector("#title").value;
   let blog = document.querySelector("#campo-blog").value;
 
+  // Obtém o nome do usuário do localStorage
+  let nomeUsuario = localStorage.getItem('nomeUsuario');
 
+  // Define os dados para enviar ao banco, incluindo o nome do usuário
   let data = {
     title,
-    blog
+    blog,
+    nomeUsuario // Adiciona o nome do usuário aqui
   };
-  // Define valores pra botar no banco
+
   try {
     const response = await fetch('http://localhost:3003/api/store/task', {
       method: "POST",
@@ -82,7 +81,6 @@ button.onclick = async function(event) {
     if (content.success) {
       window.location.reload();
       alert(content.message);
-
     } else {
       alert(content.message);
     }
@@ -90,5 +88,6 @@ button.onclick = async function(event) {
     alert('Falha ao conectar com o servidor.');
   }
 };
+
 
 // Tentar enviar pro front e se der erro apresenta essa mwensagem

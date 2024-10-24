@@ -2,34 +2,32 @@ import { setAccount } from './contaLogada.js';
 
 const button = document.querySelector("#handleSubmit");
 
-  button.onclick = async function(event) {
-    //evita que a pagina recarregue ao clicar o botaoy
-    event.preventDefault();
+button.onclick = async function(event) {
+  // Evita que a página recarregue ao clicar no botão
+  event.preventDefault();
+  let email = document.querySelector("#emailLogin").value;
+  let senha = document.querySelector("#senhaLogin").value;
+  
+  // Faz uma requisição GET para obter os dados da conta
+  const response = await fetch(`http://localhost:3003/api/login?email=${email}&senha=${senha}`, {
+    method: "GET",
+    headers: { "Content-type": "application/json;charset=UTF-8" },
+  });
 
-    let email = document.querySelector("#emailLogin").value;
-    let senha = document.querySelector("#senhaLogin").value;
+  let content = await response.json();
+  
+  if (content.success) {
+    // Salva o nome da conta no localStorage
+    localStorage.setItem('nomeUsuario', content.name);
+    // Redireciona para a página inicial
+    window.location.href = './home.html';
+    alert(content.message);
+  } else {
+    alert(content.message);
+  }
+};
 
-    //faz uma requisição get para obter os dados da conta
-    const response = await fetch(`http://localhost:3003/api/login?email=${email}&senha=${senha}`, {
-      method: "GET",
-      headers: { "Content-type": "application/json;charset=UTF-8" },
-    });
-
-    let content = await response.json();
-
-    if (content.success) {
-      let account = content.data;
-      //atribui a conta logada para a constante e salva no localstorage
-      setAccount(account);
-      localStorage.setItem('contaLogada', JSON.stringify(account));
-      window.location.href = './home.html'
-      alert(content.message);
-    } else {
-      alert(content.message);
-    }
-  };
-
-  var formSignin = document.querySelector('#signin');
+var formSignin = document.querySelector('#signin');
 var formSignup = document.querySelector('#signup');
 var btnColor = document.querySelector('.btnColor');
 

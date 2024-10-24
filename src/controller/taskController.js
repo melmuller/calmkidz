@@ -8,11 +8,12 @@ async function storeTask(request, response) {
     // Obtém os parâmetros do corpo da requisição e os coloca em um array
     const params = Array(
         request.body.title, // Título da postagem
-        request.body.blog   // Conteúdo da postagem
+        request.body.blog,   // Conteúdo da postagem
+        request.body.nomeUsuario
     );
 
     // Consulta SQL para inserir uma nova postagem na tabela 'postagens'
-    const query = "INSERT INTO postagens(titulo, conteudo) VALUES(?,?)";
+    const query = "INSERT INTO postagens(titulo, conteudo, nomeUser) VALUES(?,?,?)";
 
     // Executa a consulta SQL
     connection.query(query, params, (err, results) => {

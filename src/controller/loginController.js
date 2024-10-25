@@ -14,7 +14,7 @@ async function login(request, response) {
 
         // Verifica se há resultados (usuário encontrado)
         if (results.length > 0) {
-            
+            console.log(results[0].nome);
             // Obtém a senha fornecida e a senha recuperada do banco de dados
             const password = request.query.senha;
             const passwordQuery = results[0].senha;

@@ -5,12 +5,15 @@ const dotenv = require('dotenv').config();
 
 // Função assíncrona para armazenar uma nova tarefa (postagem) no banco de dados
 async function storeTask(request, response) {
+    console.log(request.body);
     // Obtém os parâmetros do corpo da requisição e os coloca em um array
     const params = Array(
         request.body.title, // Título da postagem
         request.body.blog,   // Conteúdo da postagem
         request.body.nomeUsuario
     );
+
+    //TALVEZ FAZER UM INNERJOIN BUSCANDO PELO ID DO USER
 
     // Consulta SQL para inserir uma nova postagem na tabela 'postagens'
     const query = "INSERT INTO postagens(titulo, conteudo, nomeUser) VALUES(?,?,?)";

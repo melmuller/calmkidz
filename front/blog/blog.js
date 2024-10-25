@@ -14,11 +14,18 @@ async function buscandoPosts() {
   let content = await response.json();
   console.log("content: ", content.data);
   
+  let nomeUsuario = localStorage.getItem('nomeUsuario');
   for (let i = 0; i < content.data.length; i++) {
     post1.innerHTML += `
 
     <article class="container-1">
     <div class="coluna">
+
+        <!-- Nome do Usuário -->
+
+        <div>
+            <h1 class="nome-user"> ${content.data[i].nomeUser} </h1>
+        </div>
        
         <!-- Título do comentário -->
         <div class="avaliar-comentario">
@@ -68,7 +75,7 @@ button.onclick = async function(event) {
     blog,
     nomeUsuario // Adiciona o nome do usuário aqui
   };
-
+  console.log(localStorage.getItem('nomeUsuario'));
   try {
     const response = await fetch('http://localhost:3003/api/store/task', {
       method: "POST",

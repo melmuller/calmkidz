@@ -12,9 +12,10 @@ async function buscandoPosts() {
   });
 
   let content = await response.json();
-  console.log("content: ", content.data);
-  
-  let nomeUsuario = localStorage.getItem('nomeUsuario');
+  console.log(content);
+  let nomeUsuario = localStorage.getItem('contaLogada');
+  console.log(nomeUsuario);
+
   for (let i = 0; i < content.data.length; i++) {
     post1.innerHTML += `
 
@@ -24,7 +25,7 @@ async function buscandoPosts() {
         <!-- Nome do Usuário -->
 
         <div>
-            <h1 class="nome-user"> ${content.data[i].nomeUser} </h1>
+            <h1 class="nome-user">${content.data[i].nomeUser}</h1>
         </div>
        
         <!-- Título do comentário -->
@@ -67,15 +68,15 @@ button.onclick = async function(event) {
   let blog = document.querySelector("#campo-blog").value;
 
   // Obtém o nome do usuário do localStorage
-  let nomeUsuario = localStorage.getItem('nomeUsuario');
+  let nomeUsuario = localStorage.getItem('contaLogada');
 
+  console.log(nomeUsuario);
   // Define os dados para enviar ao banco, incluindo o nome do usuário
   let data = {
     title,
     blog,
     nomeUsuario // Adiciona o nome do usuário aqui
   };
-  console.log(localStorage.getItem('nomeUsuario'));
   try {
     const response = await fetch('http://localhost:3003/api/store/task', {
       method: "POST",

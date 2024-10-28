@@ -18,8 +18,8 @@ button.onclick = async function(event) {
   
   if (content.success) {
     // Salva o nome da conta no localStorage
-    localStorage.setItem('nomeUsuario', content.name);
-    console.log(localStorage.setItem('nomeUsuario', content.name));
+    localStorage.setItem('contaLogada', content.data.nome)
+    console.log();
     // Redireciona para a página inicial
     window.location.href = './home.html';
     alert(content.message);

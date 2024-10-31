@@ -14,6 +14,7 @@ CREATE TABLE postagens (
   id int auto_increment NOT NULL PRIMARY KEY,
   titulo varchar(255) not null,
   conteudo longtext NOT NULL,
+  nomeUser VARCHAR(255),
   data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

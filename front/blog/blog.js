@@ -38,6 +38,11 @@ async function buscandoPosts() {
               ${content.data[i].conteudo}
             </p>
         </div>
+        <!-- Botões de editar e excluir -->
+        <div class= "botoes">
+          <button onclick="editarPost()"> Editar </button>
+          <button> Excluir </button>
+        </div>
         <hr>
     </div>
     </article>
@@ -99,3 +104,11 @@ button.onclick = async function(event) {
 
 
 // Tentar enviar pro front e se der erro apresenta essa mwensagem
+
+// CRIAR A FUNÇÃO DE UPDATE NO CONTROLLER (MÉTODO PUT)
+// CRIAR A ROTA NO ROUTER (ROUTER.PUT)
+// CRIAR A FUNÇÃO PARA BUSCAR OS PARÂMETROS NOVOS DO HTML E INSERIR PELA FUNÇÃO DO SCRIPT
+
+// CRIAR A FUNÇÃO DE DELETE NO CONTROLLER (MÉTODO DELETE)
+// CRIAR A ROTA NO ROUTER (ROUTER.DELETE)
+// DELETAR DO BANCO E SUMIR DA TELA TAMBÉM

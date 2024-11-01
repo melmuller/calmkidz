@@ -43,5 +43,41 @@ router.post("/store/task", storeTask);
  */
 router.get("/buscandoPosts", buscandoCom);
 
+// Define a rota PUT 
+/**
+ * @swagger
+ * /task/:id:
+ *   put:
+ *     summary: Edita o post
+ *     responses:
+ *       200:
+ *         description: Publicação no blog
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ */
+router.put("/buscandoPosts", buscandoCom);
+
+// Define a rota DELETE
+/**
+ * @swagger
+ * /task/:id:
+ *   delete:
+ *     summary: Retorna a publicação
+ *     responses:
+ *       200:
+ *         description: Publicação no blog
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ */
+router.delete("/buscandoPosts", buscandoCom);
+
 // Exporta o roteador para ser usado em outros arquivos
 module.exports = router;

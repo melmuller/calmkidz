@@ -76,8 +76,39 @@ async function buscandoCom(request, response) {
     });
 }
 
+async function deletarpost(request, response) {
+    // Define a consulta SQL para selecionar todas as postagens da tabela 'postagens'
+    const {id} = request.params
+    const query = "DELETE FROM postagens WHERE id = ?";
+
+    // Executa a consulta SQL
+    connection.query(query, [id], (err, results) => {
+        // Verifica se a consulta foi bem-sucedida e retorna a resposta apropriada
+        if (results) {
+            // Responde com sucesso se a consulta for bem-sucedida
+            response
+                .status(200) // Corrigido de 201 para 200 para uma operação GET
+                .json({
+                    success: true, // Corrigido 'succes' para 'success'
+                    message: "Sucesso ao deletar!",
+                    data: results
+                });
+        } else {
+            // Responde com erro se houver um problema ao buscar as postagens
+            response
+                .status(400)
+                .json({
+                    success: false, // Corrigido 'succes' para 'success'
+                    message: "Problemas ao deletar!",
+                    data: err
+                });
+        }
+    });
+}
+
 // Exporta as funções storeTask e buscandoCom para serem usadas em outros arquivos
 module.exports = {
     storeTask,
-    buscandoCom
+    buscandoCom,
+    deletarpost
 };

@@ -15,7 +15,6 @@ async function buscandoPosts() {
   console.log(content);
   let nomeUsuario = localStorage.getItem('contaLogada');
   console.log(nomeUsuario);
-
   for (let i = 0; i < content.data.length; i++) {
     post1.innerHTML += `
 
@@ -38,6 +37,7 @@ async function buscandoPosts() {
               ${content.data[i].conteudo}
             </p>
         </div>
+        <button class="botaod" onclick="deletarpost(${content.data[i].id})"> Excluir </button>
         <hr>
     </div>
     </article>
@@ -82,6 +82,26 @@ button.onclick = async function(event) {
       method: "POST",
       headers: { "Content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify(data)
+    });
+
+    let content = await response.json();
+
+    if (content.success) {
+      window.location.reload();
+      alert(content.message);
+    } else {
+      alert(content.message);
+    }
+  } catch (error) {
+    alert('Falha ao conectar com o servidor.');
+  }
+};
+
+async function deletarpost(id) {
+
+  try {
+    const response = await fetch(`http://localhost:3003/api/delete/task/${id}`, {
+      method: "DELETE"
     });
 
     let content = await response.json();

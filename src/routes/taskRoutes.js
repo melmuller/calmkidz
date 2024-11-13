@@ -43,7 +43,6 @@ router.post("/store/task", storeTask);
  */
 router.get("/buscandoPosts", buscandoCom);
 
-<<<<<<< HEAD
 // Define a rota DELETE para o endpoint '/buscandoPosts', que utiliza a função buscandoCom
 /**
  * @swagger 

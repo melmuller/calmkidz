@@ -240,14 +240,36 @@
   font-style: normal; /* Define o estilo da fonte */
 }
 
+.bloco_botoes {
+  display: flex;
+  gap: 2vw;
+  margin-top: 5%;
+}
+
 .botaod {
-  margin-right: 110px; /* Margem à esquerda */
+  /* margin-right: 110px; Margem à esquerda */
   padding: 20px 20px; /* Preenchimento interno */
   font-size: 16px; /* Tamanho da fonte */
   border: none; /* Remove a borda padrão */
   border-radius: 5px; /* Bordas arredondadas */
   color: white; /* Cor do texto */
   background-color: #eda3fc; /* Cor de fundo */
+  cursor: pointer; /* Cursor de ponteiro */
+  transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
+  height: 75px;
+  width: 95px;
+  margin-top: -6px;
+  margin-bottom: 10px;
+}
+
+.botaoe {
+  /* margin-right: 110px; Margem à esquerda */
+  padding: 20px 20px; /* Preenchimento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  color: white; /* Cor do texto */
+  background-color: #f4f58e; /* Cor de fundo */
   cursor: pointer; /* Cursor de ponteiro */
   transition: background-color 0.3s ease; /* Transição suave para a mudança de cor de fundo */
   height: 75px;

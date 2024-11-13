@@ -16,6 +16,7 @@ async function buscandoPosts() {
   let nomeUsuario = localStorage.getItem('contaLogada');
   console.log(nomeUsuario);
   for (let i = 0; i < content.data.length; i++) {
+    if(nomeUsuario === content.data[i].nomeUser){
     post1.innerHTML += `
 
     <article class="container-1">
@@ -37,12 +38,41 @@ async function buscandoPosts() {
               ${content.data[i].conteudo}
             </p>
         </div>
-        <button class="botaod" onclick="deletarpost(${content.data[i].id})"> Excluir </button>
+        <div class="bloco_botoes">
+          <button class="botaod" onclick="deletarpost(${content.data[i].id})"> Excluir </button>
+          <button class="botaoe" onclick="editarpost"> Editar </button>
+        </div>
         <hr>
     </div>
     </article>
     `
-  } 
+  } else {
+    post1.innerHTML += `
+
+    <article class="container-1">
+    <div class="coluna">
+
+        <!-- Nome do Usuário -->
+
+        <div>
+            <h1 class="nome-user">${content.data[i].nomeUser}</h1>
+        </div>
+       
+        <!-- Título do comentário -->
+        <div class="avaliar-comentario">
+            <h3 class="nome-comentario">${content.data[i].titulo}</h3>
+        </div>
+        <!-- Texto do comentário -->
+        <div class="texto-comentario">
+            <p>
+              ${content.data[i].conteudo}
+            </p>
+        </div>
+        <hr>
+    </div>
+    </article>
+    `
+  }}
 };
 
 // Verifica os conteúdos do banco e leva pro front

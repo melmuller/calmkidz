@@ -194,17 +194,18 @@
   transition: 0.4s; /* Transição suave */
 }
 
-/* Estilo do modal de adição de blog */
 #blog-add {
   width: 500px; /* Largura do modal */
   height: 350px; /* Altura do modal */
-  position: absolute; /* Posição absoluta */
-  top: 100px; /* Distância do topo */
-  right: 10px; /* Distância da direita */
+  position: fixed; /* Fixa o modal em relação à viewport */
+  top: 50%; /* Posiciona no centro vertical */
+  left: 50%; /* Posiciona no centro horizontal */
+  transform: translate(-50%, -50%); /* Ajusta para alinhar perfeitamente ao centro */
   background-color: #fdcee1; /* Cor de fundo do modal */
   display: none; /* Inicialmente, o modal está oculto */
   border-radius: 10px; /* Bordas arredondadas */
 }
+
 
 /* Estilo do formulário de adição de blog */
 .form-blog {
@@ -276,4 +277,31 @@
   width: 95px;
   margin-top: -6px;
   margin-bottom: 10px;
+}
+
+.comentarios {
+  margin-top: 20px;
+}
+
+.comentarios textarea {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+}
+
+.comentarios button {
+  margin-top: 10px;
+  background-color: #eda3fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comentarios button:hover {
+  background-color: #d38edf;
 }

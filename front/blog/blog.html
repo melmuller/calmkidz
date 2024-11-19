@@ -50,6 +50,13 @@
         <input id="handleSubmit" type="submit" value="Submit" onclick="javascript:teste2()" />
       </form>
     </section>
+
+    <div class="comentarios">
+      <h4>Comentários</h4>
+      <div id="comentarios-post-${postId}"></div>
+      <textarea id="comentario-input-${postId}" placeholder="Adicione um comentário..."></textarea>
+      <button onclick="adicionarComentario(${postId})">Enviar</button>
+  </div>
   
     <!-- Inclusão do arquivo de script JavaScript -->
     <script src="blog.js"></script>

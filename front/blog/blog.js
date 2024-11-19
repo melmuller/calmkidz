@@ -40,7 +40,7 @@ async function buscandoPosts() {
         </div>
         <div class="bloco_botoes">
           <button class="botaod" onclick="deletarpost(${content.data[i].id})"> Excluir </button>
-          <button class="botaoe" onclick="editarpost"> Editar </button>
+          <button class="botaoe" onclick="editarPost(${content.data[i].id})"> Editar </button>
         </div>
         <hr>
     </div>
@@ -69,6 +69,8 @@ async function buscandoPosts() {
             </p>
         </div>
         <hr>
+
+      </div>
     </div>
     </article>
     `
@@ -81,6 +83,7 @@ buscandoPosts();
 // Chamando a função
 function teste(){
     blog.style.display = 'block';
+    carregarComentarios(content.data[i].id);
 }
 
 
@@ -113,7 +116,6 @@ button.onclick = async function(event) {
       headers: { "Content-type": "application/json;charset=UTF-8" },
       body: JSON.stringify(data)
     });
-
     let content = await response.json();
 
     if (content.success) {
@@ -147,13 +149,68 @@ async function deletarpost(id) {
   }
 };
 
+async function editarPost(id) {
+  let novoConteudo = prompt('Insira o novo conteúdo do post')
+    const response = await fetch(`http://localhost:3003/api/put/task/${id}`, {
+      method: "PUT", // Usando PUT para atualizar o recurso
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        conteudo: novoConteudo // Aqui você pode enviar qualquer dado que deseja atualizar
+      })
+    });
 
-// Tentar enviar pro front e se der erro apresenta essa mwensagem
+    let content = await response.json();
 
-// CRIAR A FUNÇÃO DE UPDATE NO CONTROLLER (MÉTODO PUT)
-// CRIAR A ROTA NO ROUTER (ROUTER.PUT)
-// CRIAR A FUNÇÃO PARA BUSCAR OS PARÂMETROS NOVOS DO HTML E INSERIR PELA FUNÇÃO DO SCRIPT
+    if (content.success) {
+      alert(content.message);
+      // Se precisar atualizar a UI, pode ser feito aqui, por exemplo:
+      // Atualizar o conteúdo do post na tela sem recarregar
+    } else {
+      alert(content.message);
+    }
 
-// CRIAR A FUNÇÃO DE DELETE NO CONTROLLER (MÉTODO DELETE)
-// CRIAR A ROTA NO ROUTER (ROUTER.DELETE)
-// DELETAR DO BANCO E SUMIR DA TELA TAMBÉM
+    async function carregarComentarios(postId) {
+      const response = await fetch(`http://localhost:3003/api/fetchComments/${postId}`);
+      const content = await response.json();
+      const comentariosDiv = document.getElementById(`comentarios-post-${postId}`);
+      comentariosDiv.innerHTML = "";
+  
+      content.data.forEach(comentario => {
+          comentariosDiv.innerHTML += `
+              <p><strong>${comentario.nomeUser}:</strong> ${comentario.conteudo}</p>
+          `;
+      });
+  }
+
+  async function adicionarComentario(postId) {
+    const input = document.getElementById(`comentario-input-${postId}`);
+    const conteudo = input.value.trim();
+    const nomeUser = localStorage.getItem('contaLogada');
+
+    if (!conteudo) {
+        alert("O comentário não pode estar vazio.");
+        return;
+    }
+
+    const response = await fetch('http://localhost:3003/api/store/comment', {
+        method: "POST",
+        headers: { "Content-type": "application/json;charset=UTF-8" },
+        body: JSON.stringify({ postId, nomeUser, conteudo })
+    });
+
+    const result = await response.json();
+    if (result.success) {
+        alert(result.message);
+        carregarComentarios(postId);
+        input.value = ""; // Limpa o campo
+    } else {
+        alert(result.message);
+    }
+}
+
+
+  location.reload()
+}
+

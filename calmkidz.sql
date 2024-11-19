@@ -19,14 +19,22 @@ CREATE TABLE postagens (
 );
 
 select * from usuario;
-
-INSERT INTO usuario(nome, email, idade, senha) VALUES ("Gabriel","gabriel@gmail.com", "122");
-
-SELECT nome, email, senha FROM usuario WHERE email = "gabriel@gmail.com";
-
-
-delete from postagens
-	WHERE id > 0;
     
 TRUNCATE TABLE postagens;
 select * from postagens;
+
+CREATE TABLE comentarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    postId INT NOT NULL, -- ID do post ao qual o comentário está associado
+    nomeUser VARCHAR(255) NOT NULL,
+    conteudo TEXT NOT NULL,
+    dataCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (postId) REFERENCES postagens(id) ON DELETE CASCADE
+);
+
+<div class="comentarios">
+    <h4>Comentários</h4>
+    <div id="comentarios-post-${postId}"></div>
+    <textarea id="comentario-input-${postId}" placeholder="Adicione um comentário..."></textarea>
+    <button onclick="adicionarComentario(${postId})">Enviar</button>
+</div>

@@ -13,8 +13,6 @@ async function storeTask(request, response) {
         request.body.nomeUsuario
     );
 
-    //TALVEZ FAZER UM INNERJOIN BUSCANDO PELO ID DO USER
-
     // Consulta SQL para inserir uma nova postagem na tabela 'postagens'
     const query = "INSERT INTO postagens(titulo, conteudo, nomeUser) VALUES(?,?,?)";
 
@@ -106,9 +104,64 @@ async function deletarpost(request, response) {
     });
 }
 
+async function editarPost(request, response) {
+    const { id } = request.params;
+    const { conteudo } = request.body; // Pegando o novo conteúdo do corpo da requisição
+  
+    // Validações básicas
+    if (!conteudo) {
+      return response.status(400).json({
+        success: false,
+        message: "Conteúdo do post não fornecido."
+      });
+    }
+  
+    const query = "UPDATE postagens SET conteudo = ? WHERE id = ?";
+  
+    // Executa a consulta SQL para atualizar o post
+    connection.query(query, [conteudo, id], (err, results) => {
+      if (err) {
+        return response.status(500).json({
+          success: false,
+          message: "Erro ao atualizar o post.",
+          data: err
+        });
+      }
+  
+      if (results.affectedRows > 0) {
+        response.status(200).json({
+          success: true,
+          message: "Post atualizado com sucesso!",
+          data: results
+        });
+      } else {
+        response.status(404).json({
+          success: false,
+          message: "Post não encontrado para atualizar.",
+          data: null
+        });
+      }
+    });
+  }  
+
+  async function storeComment(request, response) {
+    const { postId, nomeUser, conteudo } = request.body;
+    const query = "INSERT INTO comentarios (postId, nomeUser, conteudo) VALUES (?, ?, ?)";
+  
+    connection.query(query, [postId, nomeUser, conteudo], (err, results) => {
+        if (results) {
+            response.status(201).json({ success: true, message: "Comentário adicionado!", data: results });
+        } else {
+            response.status(400).json({ success: false, message: "Erro ao adicionar comentário.", error: err });
+        }
+    });
+  }
+
 // Exporta as funções storeTask e buscandoCom para serem usadas em outros arquivos
 module.exports = {
     storeTask,
     buscandoCom,
-    deletarpost
+    deletarpost,
+    editarPost
 };
+
